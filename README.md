@@ -13,6 +13,7 @@
   <a href="https://www.linkedin.com/in/rishikesh-ombase-11989b1ab/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:rishikeshombase4@gmail.com"><img src="https://img.shields.io/badge/Email-8B5CF6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://rishikesh32.github.io"><img src="https://img.shields.io/badge/Portfolio-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=04050d" alt="Portfolio"></a>
+  <a href="https://github.com/Rishikesh32/Rishikesh32/blob/main/resume.pdf"><img src="https://img.shields.io/badge/Résumé-PDF-F472B6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Résumé (PDF)"></a>
   <img src="https://komarev.com/ghpvc/?username=Rishikesh32&style=for-the-badge&color=f472b6&label=PROFILE+VIEWS" alt="Profile views">
 </p>
 
