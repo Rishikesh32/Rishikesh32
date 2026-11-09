@@ -30,7 +30,7 @@
 class Rishikesh(AgenticAIArchitect):
     location        = "Kolhapur, India 🇮🇳"
     experience      = "6+ years in AI & ML · Senior Data Scientist"
-    focus           = ["multi-agent systems", "MCP tool layers", "agentic RAG", "LLMOps"]
+    focus           = ["multi-agent systems", "MCP tool layers", "agentic RAG", "voice AI", "LLMOps"]
     currently       = "building AlphaDesk, a multi-agent quant research platform, in public"
     learning        = ["A2A protocol", "agent memory architectures", "eval-driven development"]
     collaborate_on  = ["open-source MCP servers", "agent evaluation tooling", "AI for finance"]
@@ -86,19 +86,57 @@ flowchart TD
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22d3ee,50:8b5cf6,100:f472b6&height=3" width="100%" alt="">
 
-## 🏗️ Agentic architectures
+## 🏗️ AI systems I've architected
 
-Each one started as a classic ML or automation build that I've redesigned for the agentic era.
+From voice agents and video dubbing to document AI and quant research, each system is designed with agent orchestration, MCP tools and eval-driven guardrails.
 
 | Project | Pattern | Stack | Evolved from |
 |---|---|---|---|
 | 🛰️ **AlphaDesk** | Hierarchical supervisor | LangGraph · MCP · GraphRAG · Langfuse | Quant stock prediction |
+| 🎙️ **EchoAgent** | Listen → reason → act → speak | Whisper · streaming STT/TTS · LLM tool calling | Voice agent work |
+| 🎬 **DubFlow** | Multi-stage media pipeline | Whisper · speaker diarization · LLM translation · TTS | Video dubbing work |
 | 📑 **FundDocs Studio** | Multi-agent document pipeline | Vision-language models · LLM agents · style-guide RAG | Mutual fund pipeline |
 | 🏠 **ListingStudio** | Classify → generate → critique | Vision LLM · LangGraph · batch generation at scale | Real-estate content engine |
-| 🎬 **CineMind** | Cluster → rank → serve | User embeddings · clustering · Redis · FastAPI | OTT recommendation backend |
+| 🍿 **CineMind** | Cluster → rank → serve | User embeddings · clustering · Redis · FastAPI | OTT recommendation backend |
 | 🧾 **InvoiceOps** | Extract → act + human review | Vision LLM · computer use · Pydantic | Invoice automation (OCR) |
 | 🛸 **SkyWatch** | Perceive → reason → act | YOLO · Qwen-VL · vLLM | Drone recognition (OpenCV) |
 | 🔐 **MCP Gateway** | Secure tool gateway | MCP · OAuth · RBAC · OpenTelemetry | Data integration |
+
+<details>
+<summary><b>🎙️ EchoAgent: real-time voice agent</b></summary>
+<br>
+
+Streaming speech-to-text feeds an LLM agent that calls tools to look up, book and update records, and streaming text-to-speech replies with low latency. It copes with interruptions mid-sentence and hands off to a person when asked.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'JetBrains Mono, monospace','fontSize':'13px','lineColor':'#22d3ee'}}}%%
+flowchart LR
+    U(["🗣️ Caller"]):::input --> S["👂 Speech-to-text<br/>Whisper · streaming"]:::agent --> A{{"🧠 LLM agent<br/>tool calling"}}:::core --> T["🔧 Tools<br/>lookup · booking · CRM"]:::agent --> V["🔊 Text-to-speech<br/>streaming"]:::agent --> U
+    A -.->|"asks for a person"| H(["🙋 Human handoff"]):::human
+    classDef input fill:#062a33,stroke:#22d3ee,stroke-width:2px,color:#c9f5fd
+    classDef core  fill:#1b1446,stroke:#22d3ee,stroke-width:2px,color:#ffffff
+    classDef agent fill:#0c0f22,stroke:#8b5cf6,stroke-width:1.5px,color:#eef0ff
+    classDef human fill:#3a0f2a,stroke:#f472b6,stroke-width:2px,color:#fbcfe8
+```
+
+</details>
+
+<details>
+<summary><b>🎬 DubFlow: AI video dubbing pipeline</b></summary>
+<br>
+
+Whisper transcribes with timestamps, speaker diarization separates the voices, an LLM translates while keeping context and timing, and text-to-speech generates each speaker's voice, aligned to the original timing and mixed back with the background audio.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'JetBrains Mono, monospace','fontSize':'13px','lineColor':'#22d3ee'}}}%%
+flowchart LR
+    V(["🎞️ Source video"]):::input --> W["📝 Transcribe<br/>Whisper"]:::agent --> D["👥 Diarize<br/>who speaks when"]:::agent --> L["🌐 Translate<br/>LLM · keeps timing"]:::agent --> S["🔊 Voice<br/>TTS per speaker"]:::agent --> M["🎚️ Align + mix<br/>FFmpeg"]:::agent --> O(["🎬 Dubbed video"]):::human
+    classDef input fill:#062a33,stroke:#22d3ee,stroke-width:2px,color:#c9f5fd
+    classDef agent fill:#0c0f22,stroke:#8b5cf6,stroke-width:1.5px,color:#eef0ff
+    classDef human fill:#3a0f2a,stroke:#f472b6,stroke-width:2px,color:#fbcfe8
+```
+
+</details>
 
 <details>
 <summary><b>📑 FundDocs Studio: agentic styling for fund filings</b></summary>
@@ -118,7 +156,7 @@ flowchart LR
 </details>
 
 <details>
-<summary><b>🎬 CineMind: OTT recommendation engine</b></summary>
+<summary><b>🍿 CineMind: OTT recommendation engine</b></summary>
 <br>
 
 - Watch events become user embeddings, clustered into taste groups so viewers with similar habits are shown similar films
@@ -207,6 +245,8 @@ flowchart LR
 ![Qwen](https://img.shields.io/badge/Qwen-615CED?style=for-the-badge)
 ![DeepSeek](https://img.shields.io/badge/DeepSeek-4D6BFE?style=for-the-badge)
 ![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![Whisper](https://img.shields.io/badge/Whisper-412991?style=for-the-badge)
+![Voice AI](https://img.shields.io/badge/Voice_AI-F472B6?style=for-the-badge)
 
 </td>
 </tr>
